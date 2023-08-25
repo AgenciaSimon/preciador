@@ -1,0 +1,169 @@
+/* get fonts from assets/fonts */
+@font-face {
+  font-family: 'Arial';
+  src: url('../assets/fonts/Arial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nebula';
+  src: url('../assets/fonts/BR Nebula Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Nebula bolder';
+  src: url('../assets/fonts/BR Nebula Black.ttf') format('truetype');
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: 'Nebula bold';
+  src: url('../assets/fonts/BR Nebula Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+:root {
+  --primary-color: #1E78B5;
+  --secondary-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  font-family: 'Nebula';
+  font-weight: normal;
+}
+
+h1,
+h3 {
+  font-family: 'Nebula bolder';
+  font-weight: bolder;
+}
+
+h2 {
+  color: var(--text-color);
+  font-family: 'Nebula';
+}
+
+.div {
+  color: var(--primary-color);
+}
+
+.sub-div {
+  color: var(--text-color);
+}
+
+
+#logo-container {
+  background-color: var(--primary-color);
+}
+
+#text-code {
+  color: var(--primary-color);
+  font-family: 'Nebula bold';
+  font-size: 2rem;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid var(--primary-color);
+  ;
+}
+
+.mySlides {
+  display: none
+}
+
+.active{
+  display: block;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide{
+  height: 600px;
+  object-fit: cover;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: var(--primary-color);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
