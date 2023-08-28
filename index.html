@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/queries.js"></script>
+    <script src="scripts/slider.js"></script>
     <script src="scripts/settings.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     
@@ -31,14 +33,14 @@
         </header>
     </container>
 
-    <div class="px-12 py-20 mw-20">
+    <div class="px-12 pt-20 mw-20">
 
         <!-- ROW OF CONTENT -->
         <div class="flex flex-row justify-between items-center">
 
             <!--COLUMN OF PRODUCT DATA-->
             <div class="flex flex-col max-w-lg">
-                <h2 class="text-4xl text-gray-700">Product Name From Dobra API.</h2>
+                <h2 class="text-4xl text-gray-700">Product Name</h2>
                 <div class="mt-5">
                     <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
                     <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
@@ -58,49 +60,93 @@
             <!--COLUMN OF GALLERY ONE 9:16 IMAGE AND 3 1:1 IMAGES-->
             <div class="flex flex-col max-w-md m-5">
                 <!--image slider-->
-                <div class="slideshow-container">
+                <div class="slideshow-container -mt-8">
 
                     <div class="mySlides fade active">
-                      <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" class="slide">
+                      <img imgId="prod1" class="slide">
                     </div>
                     
                     <div class="mySlides fade">
-                      <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" class="slide">
+                      <img imgId="prod2" class="slide">
                     </div>
                     
                     <div class="mySlides fade">
-                      <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" class="slide">
+                      <img imgId="prod3" class="slide">
                     </div>
-                    
+
+                    <div class="mySlides fade">
+                        <img imgId="prod4" class="slide">
+                      </div>
+                    <!--
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
+                    -->
                     
                     </div>
                     
                     <div class="-mt-8" style="text-align:center; z-index: 9;">
-                      <span class="dot" onclick="currentSlide(1)"></span> 
-                      <span class="dot" onclick="currentSlide(2)"></span> 
-                      <span class="dot" onclick="currentSlide(3)"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
                     </div>
+
+                <!--gallery 3 images 1:1 aspect ratio-->
+                <div class="flex flex-row justify-between mt-5">
+                    <img imgId="prod2" class="gallery-s">
+                    <img imgId="prod3" class="gallery-s">
+                    <img imgId="prod4" class="gallery-s">
+                </div>
+
             </div>
 
-            <!--COLUMN OF PRODUCT DATA-->
-            <div class="flex flex-col max-w-lg">
-                <h2 class="text-4xl text-gray-700">Product Name From Dobra API.</h2>
-                <div class="mt-5">
-                    <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
-                    <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
-                </div>
-                <h2 class="text-4xl text-gray-700 mt-16">Precio Unitario: $3.86</h2>
-                <h2 class="text-3xl text-gray-700 mt-3">Código: 0925782916628</h2>
-                <h2 class="text-3xl text-red-700 mt-16">Precio al por mayor</h2>
-                <h3 class="text-blue-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
-                <div class="mt-5">
-                    <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
-                    <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
-                </div>
-                <h2 class="text-3xl text-blue-500 mt-10">Cantidad por bulto</h2>
-                <h3 class="text-4xl mt-5">30 unidades</h3>
+            <!--COLUMN OF related PRODUCTs DATA-->
+            <div class="flex w-full bg-gray-100 flex-col max-w-lg -mt-10">
+                <cardProduct class="p-4 px-8 ">
+                    <h2 class="text-2xl">Product Name From Dobra API.</h2>
+                    <div class="flex flex-row justify-between items-center">
+                        <div class="flex flex-row items-center">
+                            <img imgId="related1" class="w-46 h-36 mt-3">
+                            <div class="flex flex-col ml-5">
+                                <h3 class="text-black-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                    </div>
+                </cardProduct>
+                <cardProduct class="py-4 px-8 mt-5">
+                    <h2 class="text-2xl">Product Name From Dobra API.</h2>
+                    <div class="flex flex-row justify-between items-center">
+                        <div class="flex flex-row items-center">
+                            <img imgId="related2" class="w-46 h-36 mt-3">
+                            <div class="flex flex-col ml-5">
+                                <h3 class="text-black-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                    </div>
+                </cardProduct>
+                <cardProduct class="p-4 px-8  mt-5">
+                    <h2 class="text-2xl">Product Name From Dobra API.</h2>
+                    <div class="flex flex-row justify-between items-center">
+                        <div class="flex flex-row items-center">
+                            <img imgId="related3" class="w-46 h-36 mt-3">
+                            <div class="flex flex-col ml-5">
+                                <h3 class="text-black-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                    </div>
+                </cardProduct>
             </div>
             
             

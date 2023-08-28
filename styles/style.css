@@ -121,7 +121,13 @@ img {
 }
 
 .slide{
-  height: 600px;
+  height: 630px;
+  object-fit: cover;
+}
+
+.gallery-s{
+  max-width: 140px;
+  height: 95px;
   object-fit: cover;
 }
 
