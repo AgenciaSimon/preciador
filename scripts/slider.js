@@ -1,24 +1,14 @@
+let slideIndex = 0;
 $(function () {
   showSlides();
 });
-let slideIndex = 0;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides();
-}
-
-function currentSlide(n) {
-  showSlides();
-}
-
 function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
 
   // Ocultar todas las diapositivas
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
 
   // Quitar la clase "active" de todos los puntos de navegación
@@ -27,7 +17,7 @@ function showSlides() {
   }
 
   // Mostrar la diapositiva actual
-  slides[slideIndex].style.display = "block";  
+  slides[slideIndex].style.display = "block";
   dots[slideIndex].className += " active";
 
   // Incrementar el índice de la diapositiva

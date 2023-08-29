@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="scripts/queries.js"></script>
-    <script src="scripts/slider.js"></script>
-    <script src="scripts/settings.js"></script>
     <link rel="stylesheet" href="styles/style.css">
-    
     <title>DOBRA</title>
     <link rel='shortcut icon' type='image/x-icon'/>
 </head>
@@ -22,7 +16,7 @@
                 <div class="flex felx-row">
                 <div id="logo-container" class="flex flex-row items-center pl-12">
                     <img id="logo" alt="logo" class="w-12 h-12">
-                    <h1 class="text-4xl text-white ml-12 mr-12">DOBRA ERP</h1>
+                    <h1 id="title" class="text-4xl text-white ml-12 mr-12"></h1>
                 </div>
                 <div class="arrow-right"></div>
                 </div>
@@ -65,11 +59,11 @@
                     <div class="mySlides fade active">
                       <img imgId="prod1" class="slide">
                     </div>
-                    
+
                     <div class="mySlides fade">
                       <img imgId="prod2" class="slide">
                     </div>
-                    
+
                     <div class="mySlides fade">
                       <img imgId="prod3" class="slide">
                     </div>
@@ -81,14 +75,14 @@
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
                     -->
-                    
+
                     </div>
-                    
+
                     <div class="-mt-8" style="text-align:center; z-index: 9;">
-                      <span class="dot"></span> 
-                      <span class="dot"></span> 
-                      <span class="dot"></span> 
-                      <span class="dot"></span> 
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
                     </div>
 
                 <!--gallery 3 images 1:1 aspect ratio-->
@@ -148,10 +142,15 @@
                     </div>
                 </cardProduct>
             </div>
-            
-            
+
+
         </div>
     </div>
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/queries.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/settings.js"></script>
 </body>
 </html>

@@ -1,23 +1,23 @@
 {
-    "app-name": "appname",
-    "app-version": "1.0.0",
-    "app-description": "description",
-    "app-logo": "path of logo",
+    "app_name": "appname",
+    "app_version": "1.0.0",
+    "app_description": "description",
+    "app_logo": "path of logo",
     "dev": "author",
-    "dev-url": "author url",
-    "dev-email": "author email",
+    "dev_url": "author url",
+    "dev_email": "author email",
     "services": {
-        "dobra-api": {
+        "dobra_api": {
             "url": "dobra provided api url",
             "version": "version",
-            "jwt": "token" 
+            "jwt": "token"
         },
-        "simon-api": {
+        "simon_api": {
             "url": "simon provided api url",
             "version": "version",
-            "jwt": "token" 
+            "jwt": "token"
         }
 
     }
-    
+
 }
