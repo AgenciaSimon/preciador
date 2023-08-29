@@ -23,19 +23,3 @@ $(document).ready(function() {
     console.log(e.key);
   });
 });
-
-/*var settings = {
-    "url": "http://181.198.19.210:8090/api/Productos/productReadBarCode",
-    "method": "POST",
-    "timeout": 0,
-    "headers": {
-      "Content-Type": "application/json"
-    },
-    "data": JSON.stringify({
-      "ProductoimgId": "2800044014692"
-    }),
-  };
-
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });*/
