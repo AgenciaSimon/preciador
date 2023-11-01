@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>DOBRA</title>
+    <link rel='shortcut icon' type='image/x-icon'/>
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >
+    <container>
+        <!-- header with logo left and text rigth-->
+        <header class="flex flex-row justify-between items-center border-b pr-5">
+            <div class="">
+                <div class="flex felx-row">
+                <div id="logo-container" class="flex flex-row items-center pl-12">
+                    <img id="logo" alt="logo" class="w-12 h-12">
+                    <h1 id="title" class="text-4xl text-white ml-12 mr-12"></h1>
+                </div>
+                <div class="arrow-right"></div>
+                </div>
+            </div>
+            <div class="flex flex-row items-center input-icons" style="width:30%">
+                <i id="search" class="fa fa-search icon"></i>
+                <input id="text-code" class="input-field" type="text" value="">
+            </div>
+        </header>
+    </container>
+
+    <div class="px-12 pt-10 mw-20">
+
+        <!-- ROW OF CONTENT -->
+        <div class="flex flex-row justify-between items-center">
+
+            <!--COLUMN OF PRODUCT DATA-->
+            <div class="flex flex-col max-w-lg">
+                <h2 class="text-4xl text-gray-700" id="codeprod">Código:<span id="code"></span></h2>
+                <h2 class="text-4xl text-blue-700" id="titleprod">Product Name</h2>
+                <div class="mt-5">
+                    <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                    <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                </div>
+                <h2 class="text-4xl text-gray-700 mt-5">Precio Unitario: $<span id="priceU"></span></h2>
+                <h2 class="text-4xl text-gray-700 mt-2">Precio por bulto: $<spam id="ppm1"></spam>,<spam  id="ppm2"></spam></h2>
+
+                <div class="mt-5">
+                    <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                    <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                </div>
+                <h2 class="text-3xl text-blue-500 mt-10">Cantidad por bulto</h2>
+                <h3 class="text-4xl mt-5"><span id="cpbulto"></span> unidades</h3>
+                <h3 class="text-4xl mt-5">Stock: <span id="stock"></span></h3>
+                <img id="barcode" src="assets/img/loading.gif"></img>
+
+
+
+            </div> 
+
+            <div id="imageslider"></div>
+
+            <!--COLUMN OF related PRODUCTs DATA-->
+            <div class="flex w-full bg-gray-100 flex-col max-w-lg -mt-10">
+                <cardProduct class="p-4 px-8 ">
+                    <h2 class="text-2xl" id="pr1"></h2>
+                    <div class="flex flex-row justify-between items-center">
+                        <div class="flex w-full flex-row items-center justify-between">
+                            <div class="flex flex-col ml-5 pr-2">
+                                <h4 class="relProd-code">SL-2</h4>
+                                <h4 class="relProd-p">Precio Unitario: <span class="relProd-price">$30.99</span></h4>
+                                <h4 class="relProd-p">Precio por Bulto: <span class="relProd-price">$30.99</span></h4>
+                            </div>
+                            <img imgId="related1" class="w-46 h-36 mt-3">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                    </div>
+                </cardProduct>
+                <cardProduct class="py-4 px-8 mt-5">
+                    <h2 class="text-2xl" id="pr2"></h2>
+                    <div class="flex flex-row justify-between items-center">
+                        <div class="flex w-full flex-row items-center justify-between">
+                            <div class="flex flex-col ml-5 pr-2">
+                                <h4 class="relProd-code">SL-2</h4>
+                                <h4 class="relProd-p">Precio Unitario: <span class="relProd-price">$30.99</span></h4>
+                                <h4 class="relProd-p">Precio por Bulto: <span class="relProd-price">$30.99</span></h4>
+                            </div>
+                            <img imgId="related2" class="w-46 h-36 mt-3">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                    </div>
+                </cardProduct>
+                <cardProduct class="p-4 px-8  mt-5">
+                    <h2 class="text-2xl" id="pr3"></h2>
+                    <div class="flex flex-row justify-between items-center">
+                        <div class="flex w-full flex-row items-center justify-between">
+                            <div class="flex flex-col ml-5 pr-2">
+                                <h4 class="relProd-code">SL-2</h4>
+                                <h4 class="relProd-p">Precio Unitario: <span class="relProd-price">$30.99</span></h4>
+                                <h4 class="relProd-p">Precio por Bulto: <span class="relProd-price">$30.99</span></h4>
+                             </div>
+                            <img imgId="related3" class="w-46 h-36 mt-3">
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
+                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
+                    </div>
+                </cardProduct>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/queries.js"></script>
+    <script src="scripts/settings.js"></script>
+</body>
+</html>

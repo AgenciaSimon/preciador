@@ -4,154 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="styles/style.css">
     <title>DOBRA</title>
     <link rel='shortcut icon' type='image/x-icon'/>
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            background: url("assets/img/sliderBG.jpg") no-repeat center center fixed;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+        }
+
+        .slider {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide {
+            float: left;
+        }
+        .active-silde{
+            display: flex!important;
+        }
+        img{
+            border-radius: 20px;
+            width: 1600px!important;
+            height: 900px!important;
+        }
+
+        button{
+            font-size: 40px!important;
+            color: white!important;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+    </style>
 </head>
-<body >
-    <container>
-        <!-- header with logo left and text rigth-->
-        <header class="flex flex-row justify-between items-center border-b pr-5">
-            <div class="">
-                <div class="flex felx-row">
-                <div id="logo-container" class="flex flex-row items-center pl-12">
-                    <img id="logo" alt="logo" class="w-12 h-12">
-                    <h1 id="title" class="text-4xl text-white ml-12 mr-12"></h1>
-                </div>
-                <div class="arrow-right"></div>
-                </div>
-            </div>
-            <div class="flex flex-row items-center">
-                <p id="text-code">0925782916628</p>
-            </div>
-        </header>
-    </container>
+<body>
 
-    <div class="px-12 pt-20 mw-20">
+    <div id="sliderContainer" class="slider flex justify-center content-center place-content-center">
 
-        <!-- ROW OF CONTENT -->
-        <div class="flex flex-row justify-between items-center">
+           
 
-            <!--COLUMN OF PRODUCT DATA-->
-            <div class="flex flex-col max-w-lg">
-                <h2 class="text-4xl text-gray-700">Product Name</h2>
-                <div class="mt-5">
-                    <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
-                    <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
-                </div>
-                <h2 class="text-4xl text-gray-700 mt-16">Precio Unitario: $3.86</h2>
-                <h2 class="text-3xl text-gray-700 mt-3">Código: 0925782916628</h2>
-                <h2 class="text-3xl text-red-700 mt-16">Precio al por mayor</h2>
-                <h3 class="text-blue-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
-                <div class="mt-5">
-                    <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
-                    <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
-                </div>
-                <h2 class="text-3xl text-blue-500 mt-10">Cantidad por bulto</h2>
-                <h3 class="text-4xl mt-5">30 unidades</h3>
-            </div>
+    </div>
 
-            <!--COLUMN OF GALLERY ONE 9:16 IMAGE AND 3 1:1 IMAGES-->
-            <div class="flex flex-col max-w-md m-5">
-                <!--image slider-->
-                <div class="slideshow-container -mt-8">
-
-                    <div class="mySlides fade active">
-                      <img imgId="prod1" class="slide">
-                    </div>
-
-                    <div class="mySlides fade">
-                      <img imgId="prod2" class="slide">
-                    </div>
-
-                    <div class="mySlides fade">
-                      <img imgId="prod3" class="slide">
-                    </div>
-
-                    <div class="mySlides fade">
-                        <img imgId="prod4" class="slide">
-                      </div>
-                    <!--
-                    <a class="prev" onclick="plusSlides(-1)">❮</a>
-                    <a class="next" onclick="plusSlides(1)">❯</a>
-                    -->
-
-                    </div>
-
-                    <div class="-mt-8" style="text-align:center; z-index: 9;">
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                    </div>
-
-                <!--gallery 3 images 1:1 aspect ratio-->
-                <div class="flex flex-row justify-between mt-5">
-                    <img imgId="prod2" class="gallery-s">
-                    <img imgId="prod3" class="gallery-s">
-                    <img imgId="prod4" class="gallery-s">
-                </div>
-
-            </div>
-
-            <!--COLUMN OF related PRODUCTs DATA-->
-            <div class="flex w-full bg-gray-100 flex-col max-w-lg -mt-10">
-                <cardProduct class="p-4 px-8 ">
-                    <h2 class="text-2xl">Product Name From Dobra API.</h2>
-                    <div class="flex flex-row justify-between items-center">
-                        <div class="flex flex-row items-center">
-                            <img imgId="related1" class="w-46 h-36 mt-3">
-                            <div class="flex flex-col ml-5">
-                                <h3 class="text-black-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
-                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
-                    </div>
-                </cardProduct>
-                <cardProduct class="py-4 px-8 mt-5">
-                    <h2 class="text-2xl">Product Name From Dobra API.</h2>
-                    <div class="flex flex-row justify-between items-center">
-                        <div class="flex flex-row items-center">
-                            <img imgId="related2" class="w-46 h-36 mt-3">
-                            <div class="flex flex-col ml-5">
-                                <h3 class="text-black-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
-                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
-                    </div>
-                </cardProduct>
-                <cardProduct class="p-4 px-8  mt-5">
-                    <h2 class="text-2xl">Product Name From Dobra API.</h2>
-                    <div class="flex flex-row justify-between items-center">
-                        <div class="flex flex-row items-center">
-                            <img imgId="related3" class="w-46 h-36 mt-3">
-                            <div class="flex flex-col ml-5">
-                                <h3 class="text-black-500 mt-3"><spam class="text-6xl">$</spam><spam class="text-8xl">3.</spam><spam class="text-6xl">86</spam></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-5">
-                        <div style="height: 0.5px;" class="w-full bg-gray-400 mt-2 mb-2"></div>
-                        <div class="w-28 h-2 bg-blue-500 -mt-4 mb-2"></div>
-                    </div>
-                </cardProduct>
-            </div>
-
-
-        </div>
+    <div style="position: absolute; bottom:40px">
+        <button class="anterior"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button class="siguiente ml-12"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="scripts/queries.js"></script>
-    <script src="scripts/slider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/promos.js"></script>
     <script src="scripts/settings.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </body>
 </html>
